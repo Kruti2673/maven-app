@@ -34,5 +34,19 @@ maven 'Maven'
         }
       }
     }
+    stage('Installation in local'){
+      steps{
+        script{
+          bat 'mvn install'
+        }
+      }
+    }
+    stage('Deployment'){
+      steps{
+        script{
+          bat 'mvn deploy'
+        }
+      }
+    }
   }
 }
